@@ -82,16 +82,20 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    height: 200px;
-    background-image: linear-gradient(black 40px, white 40px);
+    flex-basis: 150px;
+    flex-shrink: 1;
+    background-image: linear-gradient(black 30px, white 30px);
 
     nav {
-        height: 160px;
-        padding-top: 110px;
-        padding-bottom: 70px;
+
+        padding-top: 50px;
+        padding-bottom: 20px;
         display: flex;
         justify-content: space-between;
-        align-items: center;        
+        align-items: center;   
+            .logo {
+                width: 80px;
+            }     
             ul {
                 display: flex;
                 li {

@@ -1,25 +1,24 @@
 <template>
-  <div>
+  <div id="home">
       <TheHeader />
 
-      <main>
+      <TheContent />
 
-      </main>
-
-      <footer>
-
-      </footer>
-
+      <TheFooter />
   </div>
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue'
+import TheContent from './components/TheContent.vue'
+import TheFooter from './components/TheFooter.vue'
 
 export default {
   name: 'App',
   components: {
     TheHeader,
+    TheContent,
+    TheFooter
   }
 }
 </script>
@@ -33,8 +32,13 @@ export default {
 }
 
 body {
-  height: 100vh;  
   font-family: "Segoe UI", "Open Sans", Helvetica, sans-serif;
+}
+
+#home {
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -55,6 +59,5 @@ a {
   max-width: 1200px;
   height: 100%;
   margin: 0 auto;
-  text-align: center;
 }
 </style>
