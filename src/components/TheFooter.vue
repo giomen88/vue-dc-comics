@@ -126,8 +126,7 @@ footer {
             }
 
             .big-logo {
-                width: 398px;
-                align-self: flex-start;
+                width: 450px;
             }
         }
     }
