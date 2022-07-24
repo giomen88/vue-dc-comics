@@ -10,18 +10,14 @@
 
 <script>
 export default {
-    name: 'TheContent',
+    name: 'TheMain',
 }
 </script>
 
 <style lang="scss" scoped>
 main {
-    flex-grow: 1;
-
-    #content {
-    height: 160px;
-    background-color: black;
-    color: white;
-    }
+    height: calc(100vh - 500px);
+    background-color: #000000;
+    color: #fcfcfc;
 }
 </style>

@@ -2,7 +2,7 @@
     <header>
         <div class="container">
             <nav>
-            <div class="logo"><img src="../assets/img/dc-logo.png" alt=""></div>
+            <div class="logo"><a href=""><img src="../assets/img/dc-logo.png" alt=""></a></div>
             <div class="links">
                 <ul>
                 <li v-for="link in headerLinks" 
@@ -82,38 +82,35 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    flex-basis: 150px;
-    flex-shrink: 1;
-    background-image: linear-gradient(black 30px, white 30px);
+  height: 100px;
+  background-image: linear-gradient(#000000 10px, #fcfcfc 10px);
 
-    nav {
-
-        padding-top: 50px;
-        padding-bottom: 20px;
+  nav {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+      .logo {
+        width: 60px;
+      }     
+      ul {
         display: flex;
-        justify-content: space-between;
-        align-items: center;   
-            .logo {
-                width: 80px;
-            }     
-            ul {
-                display: flex;
-                li {
-                    font-size: 0.8rem;
-                    font-weight: bold;
-                    margin: 10px;
-                    a {
-                        color: black;
-                        padding: 5px;
-                        &:hover {
-                            color:#0C7CEC;
-                        }
-                        &.active {
-                            border-bottom: 3px solid #0C7CEC;
-                        }
-                    }
-                }
+          li {
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin: 10px;
+            a {
+              color: #000000;
+              padding: 5px;
+              &:hover {
+                color:#0C7CEC;
+              }
+              &.active {
+                border-bottom: 3px solid #0C7CEC;
+              }
             }
-    }
+          }
+      }
+  }
 }
 </style>
