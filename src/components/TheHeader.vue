@@ -98,7 +98,7 @@ header {
           li {
             font-size: 0.8rem;
             font-weight: bold;
-            margin: 10px;
+            margin: 0 5px;
             a {
               color: #000000;
               padding: 5px;
