@@ -1,35 +1,14 @@
 <template>
 <div class="banner">
     <div class="container">
-        <div class="card">
+        <div 
+        class="card"
+        v-for="link in bannerLinks"
+        :key="link.text">
             <figure>
-                <img src="../assets/img/buy-comics-digital-comics.png" alt="">
+                <img :src="link.url" :alt="link.text">
             </figure>
-            <figcaption>DIGITAL COMICS</figcaption>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="../assets/img/buy-comics-merchandise.png" alt="">
-            </figure>
-            <figcaption>DC MERCHANDISE</figcaption>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="../assets/img/buy-comics-subscriptions.png" alt="">
-            </figure>
-            <figcaption>SUBSCRIPTION</figcaption>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="../assets/img/buy-comics-shop-locator.png" alt="">
-            </figure>
-            <figcaption>COMIC SHOP LOCATOR</figcaption>
-        </div>
-        <div class="card">
-            <figure>
-                <img src="../assets/img/buy-dc-power-visa.svg" alt="">
-            </figure>
-            <figcaption>DC POWER VISA</figcaption>
+            <figcaption>{{link.text}}</figcaption>
         </div>
     </div>
 </div>    
@@ -37,7 +16,36 @@
 
 <script>
 export default {
-    name: 'TheBanner'
+    name: 'TheBanner',
+
+    data() {
+        return {
+            bannerLinks: [
+                {
+                    text: "DIGITAL COMICS",
+                    url: require("../assets/img/buy-comics-digital-comics.png"),
+                },
+                {
+                    text: "DC MERCHANDISE",
+                    url:  require("../assets/img/buy-comics-merchandise.png"),
+                },
+                {
+                    text: "SUBSCRIPTION",
+                    url:  require("../assets/img/buy-comics-subscriptions.png"),
+                },
+                {
+                    text: "COMIC SHOP LOCATOR",
+                    url: require( "../assets/img/buy-comics-shop-locator.png"),
+                },
+                {
+                    text: "DC POWER VISA",
+                    url:  require("../assets/img/buy-dc-power-visa.svg"),
+                }
+            ]
+
+        }
+    },
+ 
 }
 </script>
 

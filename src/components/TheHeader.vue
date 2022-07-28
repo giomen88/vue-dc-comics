@@ -5,7 +5,8 @@
             <div class="logo"><a href=""><img src="../assets/img/dc-logo.png" alt=""></a></div>
             <div class="links">
                 <ul>
-                <li v-for="link in headerLinks" 
+                <li 
+                v-for="link in headerLinks" 
                 :key="link.text">
                     <a href="link.url">{{ link.text.toUpperCase() }}</a>
                 </li>
